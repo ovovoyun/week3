@@ -1,0 +1,67 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    
+    &:hover{
+        opacity: 0.8;
+    }
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+body{
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+}
+
+.container{
+    max-width: $containerMaxWidth;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+h2{
+    font-size: $fz-16;
+    font-weight: bold;
+    color: $darkPrimary;
+}
+
+h3{
+    font-size: $fz-12;
+    font-weight: bold;
+    color: $darkPrimary;
+}
+
+h4{
+    font-size: $fz-9;
+    color: $darkPrimary;
+}
+
+h5{
+    font-size: $fz-6;
+    font-weight: bold;
+    color: $darkPrimary;
+}
+
+
+
+@media screen and (max-width: $phoneBreakPoint) {
+
+    h2, h3, h5{
+        font-size: $fz-6;
+    }
+
+    h4{
+        font-size: $fz-4;;
+    }
+    
+}

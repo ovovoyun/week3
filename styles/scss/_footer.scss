@@ -1,0 +1,157 @@
+.red-bg{
+    background-color: $primary;
+}
+
+.footer{
+    padding-top: 60px;
+
+    a{
+        display: block;
+        color: white;
+    }
+
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+
+    .footer__content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__menu{
+        @extend %justify-sb;
+        margin-bottom: 35px;
+
+        a{
+            text-align: center;
+            padding: 0 24px;
+        }
+
+        li:first-child{
+            a{
+                padding-left: 0;
+            }
+        }
+    }
+
+    .footer__aboutUs  {
+        li {
+            a{
+                display: flex;
+                align-items: center;
+                font-size: $fz-9;
+
+                span{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 36px;
+                    margin-right: 16px;
+                }
+            }
+
+            &:first-child{
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .footer__app{
+        @include flex(space-between, center);
+
+        a{
+            padding: 0 16px;
+        }
+
+        li:last-child{
+            a{
+
+                padding-right: 0;
+            }
+        }
+
+        img{
+            @include size(40px, 40px);
+        }
+    }
+
+    
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        @include py(32px);
+    }
+
+    .footer__copyright{
+        color: white;
+    }
+
+    .footer__terms{
+        display: flex;
+
+        a{
+            padding: 0px 24px;
+        }
+
+        li:last-child{
+            a{
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: $phoneBreakPoint) {
+    .footer{
+        padding-top: 24px;
+
+        &__top{
+            margin-bottom: 24px;
+        }
+
+        .footer__menu{
+            display: none;
+        }
+
+        .footer__aboutUs{
+            li > a{
+                font-size: $fz-4;
+
+                span{
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        .footer__app{
+            a{
+                padding: 0px 8px;
+            }
+        }
+
+        &__bottom{
+            flex-direction: column;
+            @include py(16px);
+        }
+
+        .footer__copyright{
+            margin-bottom: 8px;
+        }
+
+        .footer__terms{
+            flex-direction: column;
+            
+            a{
+                padding: 0;
+                padding-bottom: 8px;
+            }
+        }
+    }
+}
+
+
