@@ -349,6 +349,9 @@ h5 {
 .pro h3 {
   margin-bottom: 32px;
 }
+.pro__list {
+  flex-wrap: wrap;
+}
 .pro__list li {
   width: 24%;
 }
@@ -371,6 +374,9 @@ h5 {
 .classic {
   text-align: center;
 }
+.classic__list {
+  flex-wrap: wrap;
+}
 .classic__list li {
   width: 30%;
 }
@@ -392,6 +398,7 @@ h5 {
 }
 .feat__list {
   display: flex;
+  flex-wrap: wrap;
 }
 .feat__list li {
   width: 50%;
@@ -409,6 +416,9 @@ h5 {
 /*----- customerRec -----*/
 .customerRec h3 {
   text-align: center;
+}
+.customerRec__list {
+  flex-wrap: wrap;
 }
 .customerRec__list a {
   display: block;
@@ -514,9 +524,6 @@ h5 {
     background: center/cover no-repeat url("../../images/home-header-sm.png");
   }
   /*----- pro -----*/
-  .pro__list {
-    flex-wrap: wrap;
-  }
   .pro__list li {
     width: 49%;
   }
@@ -525,9 +532,6 @@ h5 {
     margin-bottom: 36px;
   }
   /*----- classic -----*/
-  .classic__list {
-    flex-wrap: wrap;
-  }
   .classic__list li {
     width: 100%;
   }
@@ -538,9 +542,6 @@ h5 {
     max-height: 336px;
   }
   /*----- feat -----*/
-  .feat__list {
-    flex-wrap: wrap;
-  }
   .feat__list li {
     width: 100%;
   }
@@ -551,9 +552,6 @@ h5 {
     width: 100%;
   }
   /*----- customerRec -----*/
-  .customerRec__list {
-    flex-wrap: wrap;
-  }
   .customerRec__list li {
     width: 49%;
     margin-bottom: 24px;

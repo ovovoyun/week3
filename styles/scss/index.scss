@@ -53,6 +53,7 @@
 
     &__list{
         @extend %justify-sb;
+        flex-wrap: wrap;
 
         li{
             width: 24%;
@@ -84,6 +85,7 @@
 
     &__list{
         @extend %justify-sb;
+        flex-wrap: wrap;
 
         li{
             width: 30%;
@@ -111,6 +113,7 @@
 
     &__list{
         display: flex;
+        flex-wrap: wrap;
 
         li{
             width: 50%;
@@ -139,6 +142,7 @@
 
     &__list{
         @extend %justify-sb;
+        flex-wrap: wrap;
 
         a{
             display: block;
@@ -277,7 +281,6 @@
     .pro{
 
         &__list{
-            flex-wrap: wrap;
 
             li{
                 width: 49%;
@@ -295,7 +298,6 @@
     /*----- classic -----*/
     .classic{
         &__list{
-            flex-wrap: wrap;
 
             li{
                 width: 100%;
@@ -315,7 +317,6 @@
     .feat{
 
         &__list{
-            flex-wrap: wrap;
 
             li{
                 width: 100%;
@@ -335,7 +336,6 @@
     .customerRec{
 
         &__list{
-            flex-wrap: wrap;
 
             li{
                 width: 49%;
