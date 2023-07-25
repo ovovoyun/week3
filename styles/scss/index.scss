@@ -54,9 +54,11 @@
     &__list{
         @extend %justify-sb;
         flex-wrap: wrap;
+        margin: 0 -12px;
 
         li{
-            width: 24%;
+            width: 25%;
+            padding: 0 12px;
 
             img{
                 @include size(83px, 83px);
@@ -70,12 +72,7 @@
             p{
                 text-align: left;
             }
-
-            &:not(:last-child){
-                margin-right: 8px;
-            }
         }
-
     }
 }
 
@@ -86,9 +83,11 @@
     &__list{
         @extend %justify-sb;
         flex-wrap: wrap;
+        margin: 0 -12px;
 
         li{
-            width: 30%;
+            width: 33.33%;
+            padding: 0 12px;
         }
 
         a{
@@ -283,10 +282,9 @@
         &__list{
 
             li{
-                width: 49%;
+                width: 50%;
 
                 &:not(:last-child){
-                    margin-right: 0;
                     margin-bottom: 36px;
 
                 }
@@ -338,7 +336,7 @@
         &__list{
 
             li{
-                width: 49%;
+                width: 48%;
                 margin-bottom: 24px;
             }
         }
