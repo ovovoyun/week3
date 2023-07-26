@@ -95,7 +95,7 @@ body {
 }
 
 .container {
-  max-width: 1296px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 12px;
 }
@@ -130,9 +130,6 @@ h5 {
   h4 {
     font-size: 16px;
   }
-}
-.header {
-  background-color: #AA0601;
 }
 .header nav {
   display: flex;
@@ -185,10 +182,6 @@ h5 {
     padding: 12px 0px;
   }
 }
-.red-bg {
-  background-color: #AA0601;
-}
-
 .footer {
   padding-top: 60px;
 }
@@ -301,6 +294,10 @@ h5 {
   }
 }
 /*----- common -----*/
+.red-bg {
+  background-color: #AA0601;
+}
+
 .pink-bg {
   background-color: #FBF2F2;
 }
