@@ -9,6 +9,10 @@
     }
 }
 
+h2, h3, h4, h5{
+    color: $darkPrimary;
+}
+
 .classic, .feat, .customerRec, .contactUs{
     h3{
         margin-bottom: 48px;

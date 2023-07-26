@@ -500,4 +500,33 @@ form {
     width: 100%;
     padding: 16px 0px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+.faq {
+  max-width: 856px;
+  padding-top: 96px;
+  padding-bottom: 80px;
+}
+.faq h5 {
+  margin-bottom: 24px;
+}
+.faq__list li:not(:last-child) {
+  margin-bottom: 32px;
+}
+.faq__list .faq__title {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 375px) {
+  .faq {
+    padding-top: 40px;
+    padding-bottom: 64px;
+  }
+}/*# sourceMappingURL=faq.css.map */

@@ -64,6 +64,18 @@ table {
   user-select: none;
 }
 
+.text-leftLine {
+  padding-left: 16px;
+  border-left: 8px solid #9F1213;
+  margin-bottom: 32px;
+}
+@media (max-width: 375px) {
+  .text-leftLine {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
+
 /*----- background -----*/
 .bg-primary {
   background-color: #AA0601;
@@ -218,24 +230,20 @@ body {
 h2 {
   font-size: 64px;
   font-weight: bold;
-  color: #650300;
 }
 
 h3 {
   font-size: 48px;
   font-weight: bold;
-  color: #650300;
 }
 
 h4 {
   font-size: 36px;
-  color: #650300;
 }
 
 h5 {
   font-size: 24px;
   font-weight: bold;
-  color: #650300;
 }
 
 @media (max-width: 375px) {
@@ -359,6 +367,7 @@ h5 {
 .footer .footer__app img {
   width: 40px;
   height: 40px;
+  object-fit: contain;
 }
 .footer__bottom {
   display: flex;
@@ -511,6 +520,10 @@ form {
     padding-top: 40px;
     padding-bottom: 40px;
   }
+}
+
+h2, h3, h4, h5 {
+  color: #650300;
 }
 
 .classic h3, .feat h3, .customerRec h3, .contactUs h3 {

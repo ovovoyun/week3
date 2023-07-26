@@ -73,6 +73,7 @@
 
         img{
             @include size(40px, 40px);
+            object-fit: contain;
         }
     }
 

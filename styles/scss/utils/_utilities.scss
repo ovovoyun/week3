@@ -7,6 +7,17 @@
     user-select: none;
 }
 
+.text-leftLine{
+    padding-left: 16px;
+    border-left:  8px solid $borderPrimary;
+    margin-bottom: 32px;
+
+    @media (max-width: $breakPoint-sm) {
+        font-size: $fz-6;
+        margin-bottom: 24px;
+    }
+}
+
 /*----- background -----*/
 .bg-primary{
     background-color: $primary;
