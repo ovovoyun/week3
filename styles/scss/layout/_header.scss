@@ -1,0 +1,66 @@
+.header{
+    padding: 16px 0px;
+
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+        @include size(80px, 50px);
+        display: block;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+        background: center/contain no-repeat url("#{$imgPath}logo-white.png");
+    }
+
+    &__menu{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        li{
+            a{
+                display: block;
+                font-size: $fz-5;
+                color: white;
+                padding: 8px 32px;
+            }
+
+            &:last-child{
+                a{
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $breakPoint-md) {
+    .header{
+        padding-bottom: 0;
+
+        nav{
+            max-width: 100%;;
+            flex-direction: column;
+            @include px(0px);
+        }
+
+        .logo{
+            margin-left: 16px;
+            margin-bottom: 16px;
+        }
+
+        li{
+            width: 50%;
+            text-align: center;
+            border: 1px solid white;
+
+            a{
+                font-size: $fz-4;
+                padding: 12px 0px;
+            }
+        }
+    }
+}

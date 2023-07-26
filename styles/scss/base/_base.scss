@@ -24,10 +24,20 @@ body{
 }
 
 .container{
-    max-width: $containerMaxWidth;
+    max-width: calc($container-lg + $gutter * 2);
     margin: 0 auto;
-    padding: 0 12px;
+    padding: 0 $gutter;
+
+    @media (max-width: $breakPoint-md) {
+        max-width: calc($container-md + $gutter * 2);
+    }
+    
+    @media (max-width: $breakPoint-sm) {
+        max-width: calc($container-sm + $gutter * 2);
+    }
 }
+
+
 
 h2{
     font-size: $fz-16;
@@ -54,7 +64,7 @@ h5{
 
 
 
-@media screen and (max-width: $phoneBreakPoint) {
+@media (max-width: $breakPoint-sm) {
 
     h2, h3, h5{
         font-size: $fz-6;

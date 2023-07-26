@@ -1,0 +1,106 @@
+/*----- text -----*/
+.text-center{
+    text-align: center;
+}
+
+.prevent-select{
+    user-select: none;
+}
+
+/*----- background -----*/
+.bg-primary{
+    background-color: $primary;
+}
+
+.bg-lightPrimary{
+    background-color: $lightPrimary;
+}
+
+/*----- row + col -----*/
+.row{
+    display: flex;
+    margin: 0 #{-$gutter};
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: percentage(calc(round(calc($i / 12 * 100000)) / 100000));
+    }
+}
+
+@media (max-width: $breakPoint-md) {
+    .col-md-6{
+        width: 50%;
+    }
+    
+    .col-md-12{
+        width: 100%;
+    }
+}
+
+@media (max-width: $breakPoint-sm) {
+    .col-sm-12{
+        width: 100%;
+    }
+}
+
+/*----- flex -----*/
+@mixin flex($justify: flex-start, $align: flex-start){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}
+
+.flex{
+    display: flex;
+}
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.justify-sb{
+    justify-content: space-between;
+}
+
+.align-center{
+    align-items: center;
+}
+
+/*----- padding + margin -----*/
+@mixin px($px){
+    padding-left: $px;
+    padding-right: $px;
+}
+
+@mixin py($py){
+    padding-top: $py;
+    padding-bottom: $py;
+}
+
+.mx-auto{
+    margin: 0 auto;
+} 
+
+%mx--gutter{
+    margin: 0 #{-$gutter};
+}
+
+%px-gutter{
+    padding: 0 $gutter;
+}
+
+
+/*----- others -----*/
+%line{
+    border: 1px solid blue;
+}

@@ -1,11 +1,12 @@
-@import "reset";
+@import "./base/reset";
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,900&display=swap');
 
 //思源黑體
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
 
-@import "variables";
-@import "utilities";
-@import "base";
-@import "layout";
+@import "./utils/variables";
+@import "./utils/utilities";
+@import "./base/base";
+@import "./layout/layout";
+@import "./components/form";

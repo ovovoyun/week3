@@ -1,6 +1,12 @@
-$containerMaxWidth: 1320px;
-$padBreakPoint: 992px;
-$phoneBreakPoint: 767px;
+$gutter: 12px;
+$container-lg: 1296px;
+$container-md: 696px;
+$container-sm: 348px;
+
+$breakPoint-md: 768px;
+$breakPoint-sm: 375px;
+
+$imgPath: "../../images/";
 
 $primary: #AA0601;
 $lightPrimary: #FBF2F2;
