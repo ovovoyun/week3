@@ -1,0 +1,23 @@
+.subHeader__list{
+    display: flex;
+    
+    li{
+
+        a{
+            display: block;
+            padding: 13px 24px;
+            color: white;
+        }
+
+        &:first-child{
+            a{
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+.searchIcon{
+    color: white;
+    font-size: 30px;
+}

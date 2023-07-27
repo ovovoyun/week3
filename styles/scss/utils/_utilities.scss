@@ -27,6 +27,23 @@
     background-color: $lightPrimary;
 }
 
+.bg-darkPrimary{
+    background-color: $darkPrimary;
+}
+
+/*----- display -----*/
+@media (max-width: $breakPoint-md) {
+    .md-none{
+        display: none;
+    }
+}
+
+@media (max-width: $breakPoint-sm) {
+    .sm-none{
+        display: none;
+    }
+}
+
 /*----- row + col -----*/
 .row{
     display: flex;

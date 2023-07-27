@@ -1,0 +1,45 @@
+.pageList{
+    display: flex;
+    justify-content: center;
+
+
+    li{
+        border: 1px solid $gray;
+
+        a{
+            display: block;
+            padding: 12px 16px;
+
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+
+        &:first-child, &:last-child{
+            a{
+                padding: 12px;
+
+                &:hover{
+                    background-color: $lightGray;
+                    color: $gray;
+                    opacity: 1;
+                }
+            }
+        }
+
+        @media (max-width: $breakPoint-md) {
+            &:first-child, &:last-child{
+                a{
+                    padding: 12px 8px;
+                }
+            }
+        }
+
+        @media (max-width: $breakPoint-sm) {
+            &:nth-child(5),&:nth-child(6){
+                display: none;
+            }
+        }
+    }
+}
