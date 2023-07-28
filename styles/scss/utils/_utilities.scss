@@ -47,7 +47,7 @@
 /*----- row + col -----*/
 .row{
     display: flex;
-    margin: 0 #{-$gutter};
+    margin: 0 #{-(calc($gutter / 2))};
 }
 
 @for $i from 1 through 12 {
@@ -120,11 +120,11 @@
 } 
 
 %mx--gutter{
-    margin: 0 #{-$gutter};
+    margin: 0 #{-(calc($gutter / 2))};
 }
 
 %px-gutter{
-    padding: 0 $gutter;
+    padding: 0 #{calc($gutter / 2)};
 }
 
 

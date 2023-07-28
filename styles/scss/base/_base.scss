@@ -24,19 +24,18 @@ body{
 }
 
 .container{
-    max-width: calc($container-lg + $gutter * 2);
+    max-width: #{$container-lg + $gutter};
     margin: 0 auto;
-    padding: 0 $gutter;
+    padding: 0 calc($gutter / 2);
 
     @media (max-width: $breakPoint-md) {
-        max-width: calc($container-md + $gutter * 2);
+        max-width: #{$container-md + $gutter};
     }
     
     @media (max-width: $breakPoint-sm) {
-        max-width: calc($container-sm + $gutter * 2);
+        max-width: #{$container-sm + $gutter};
     }
 }
-
 
 
 h2{
