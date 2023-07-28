@@ -438,6 +438,11 @@ h5 {
     padding-bottom: 8px;
   }
 }
+@media (max-width: 375px) {
+  .footer .footer__app a {
+    padding: 0px;
+  }
+}
 .subHeader__list {
   display: flex;
 }

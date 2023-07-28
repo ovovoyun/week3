@@ -4,6 +4,7 @@ const nextBtn = document.querySelector(".page-nextBtn");
 
 let currentPage = 1;
 
+//移除原先頁數樣式，(陣列從0開始須-1)新頁數顯示active樣式
 function updatePage() {
     pageLink.forEach(link => link.classList.remove("page-active"));
     pageLink[currentPage - 1].classList.add("page-active");
@@ -26,8 +27,8 @@ nextBtn.addEventListener("click", function() {
 });
 
 pageLink.forEach((link, index) => {
-    link.addEventListener("click", function(event) {
-        event.preventDefault();
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
         currentPage = index + 1;
         updatePage();
     });

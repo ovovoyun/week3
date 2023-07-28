@@ -152,3 +152,12 @@
 }
 
 
+@media (max-width: $breakPoint-sm) {
+    .footer{
+        .footer__app{
+            a{
+                padding: 0px;
+            }
+        }
+    }
+}
