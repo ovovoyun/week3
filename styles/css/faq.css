@@ -184,6 +184,10 @@ table {
   justify-content: space-between;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .align-center {
   align-items: center;
 }
@@ -216,6 +220,10 @@ img {
 body {
   font-family: "Roboto", "Noto Sans TC", sans-serif;
   line-height: 1.5;
+}
+
+button {
+  cursor: pointer;
 }
 
 .container {
@@ -534,36 +542,39 @@ form {
   }
 }
 
-.pageList {
-  display: flex;
-  justify-content: center;
-}
-.pageList li {
+.pagination {
+  display: inline-flex;
   border: 1px solid #555555;
 }
-.pageList li a {
+.pagination li:not(:last-child) {
+  border-right: 1px solid #555555;
+}
+.pagination li .page-link {
   display: block;
   padding: 12px 16px;
 }
-.pageList li a:hover {
+.pagination li .page-link:hover, .pagination li .page-active {
   background-color: black;
   color: white;
 }
-.pageList li:first-child a, .pageList li:last-child a {
+.pagination li .page-preBtn, .pagination li .page-nextBtn {
+  height: 100%;
   padding: 12px;
+  border: none;
+  background-color: transparent;
 }
-.pageList li:first-child a:hover, .pageList li:last-child a:hover {
+.pagination li .page-preBtn:hover, .pagination li .page-nextBtn:hover {
   background-color: #F2F2F2;
   color: #555555;
   opacity: 1;
 }
 @media (max-width: 768px) {
-  .pageList li:first-child a, .pageList li:last-child a {
+  .pagination li .page-preBtn, .pagination li .page-nextBtn {
     padding: 12px 8px;
   }
 }
 @media (max-width: 375px) {
-  .pageList li:nth-child(5), .pageList li:nth-child(6) {
+  .pagination li:nth-child(5), .pagination li:nth-child(6) {
     display: none;
   }
 }

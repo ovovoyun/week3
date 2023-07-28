@@ -1,43 +1,44 @@
-.pageList{
-    display: flex;
-    justify-content: center;
+.pagination{
+    display: inline-flex;
+    border: 1px solid $gray;
 
 
     li{
-        border: 1px solid $gray;
-
-        a{
-            display: block;
-            padding: 12px 16px;
-
-            &:hover{
-                background-color: black;
-                color: white;
-            }
+        &:not(:last-child){
+            border-right: 1px solid $gray;
         }
 
-        &:first-child, &:last-child{
-            a{
-                padding: 12px;
+        .page-link{
+            display: block;
+            padding: 12px 16px;
+        }
 
-                &:hover{
-                    background-color: $lightGray;
-                    color: $gray;
-                    opacity: 1;
-                }
+        .page-link:hover, .page-active{
+            background-color: black;
+            color: white;
+        }
+
+        .page-preBtn, .page-nextBtn{
+            height: 100%;
+            padding: 12px;
+            border: none;
+            background-color: transparent;
+
+            &:hover{
+                background-color: $lightGray;
+                color: $gray;
+                opacity: 1;
             }
         }
 
         @media (max-width: $breakPoint-md) {
-            &:first-child, &:last-child{
-                a{
-                    padding: 12px 8px;
-                }
+            .page-preBtn, .page-nextBtn{
+                padding: 12px 8px;
             }
         }
 
         @media (max-width: $breakPoint-sm) {
-            &:nth-child(5),&:nth-child(6){
+            &:nth-child(5), &:nth-child(6){
                 display: none;
             }
         }

@@ -23,6 +23,10 @@ body{
     line-height: 1.5;
 }
 
+button{
+    cursor: pointer;
+}
+
 .container{
     max-width: #{$container-lg + $gutter};
     margin: 0 auto;
