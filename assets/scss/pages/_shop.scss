@@ -1,4 +1,4 @@
-.shop{
+.shop, .shopDetail{
     padding-top: 96px;
     padding-bottom: 80px;
 
@@ -12,7 +12,7 @@
     }
 }
 
-.shop__selectCity{
+.shop__selectCity, .shop__selectStore{
     display: flex;
     min-width: 304px;
     width: 32%;
@@ -47,26 +47,46 @@
     @media (max-width: $breakPoint-md) {
         gap: 24px;
     }
+}
 
-    &__block{
-        display: flex;
-        flex-direction: column;
-        width: calc((100% - 48px) / 3);
+.shop__block{
+    display: flex;
+    flex-direction: column;
+    width: calc((100% - 48px) / 3);
+
+    @media (max-width: $breakPoint-md) {
+        width: calc((100% - 24px) / 2);
+    }
+
+    @media (max-width: 630px) {
+        width: 100%;
+    }
+
+    .block__text{
         border: 1px solid $borderBlack;
-
-        @media (max-width: $breakPoint-md) {
-            width: calc((100% - 24px) / 2);
-        }
-    
-        @media (max-width: 630px) {
-            width: 100%;
-        }
 
         h5{
             padding: 16px 24px;
             color: black;
             font-weight: normal;
             border-bottom: 1px solid $borderBlack;
+        }
+    
+        .block__list{
+            flex-grow: 1;
+            padding: 16px 24px;
+        
+            li{
+                display: flex;
+                align-items: center;
+                margin-bottom: 8px;
+                font-size: $fz-5;
+        
+                span{
+                    margin-right: 11px;
+                    font-size: 18px;
+                }
+            }
         }
 
         a{
@@ -78,21 +98,51 @@
             text-align: center;
         }
     }
+
 }
 
-.block__content{
-    flex-grow: 1;
-    padding: 16px 24px;
+/*----- shopDetail -----*/
 
-    li{
-        display: flex;
-        align-items: center;
-        margin-bottom: 8px;
-        font-size: $fz-5;
+.shopDetail__content{
+    display: flex;
+    gap: 0px 24px;
 
-        span{
-            margin-right: 11px;
-            font-size: 18px;
+    @media (max-width: $breakPoint-md) {
+        flex-direction: column;
+        gap: 24px 0px;
+    }
+
+    .shopDetail__block{
+        width: 40%;
+    
+        @media (max-width: $breakPoint-md) {
+            width: 100%;
+            flex-direction: row;
+            gap: 0px 24px;
+
+            img{
+                width: calc((100% - 24px) / 2);
+            }
+        }
+    
+        @media (max-width: 600px) {
+            flex-direction: column;
+            gap: 0px;
+
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    iframe{
+        width: 55%;
+        height: auto;
+
+        @media (max-width: $breakPoint-md) {
+            width: 100%;
+            min-height: 400px;
         }
     }
 }
+

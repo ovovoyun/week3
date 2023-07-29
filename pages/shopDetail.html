@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week3</title>
+    <%- include('./layout/head.ejs'); -%>
+</head>
+<body>
+    <%- include('./layout/header.ejs'); -%>
+    <main class="container">
+        <div class="shopDetail">
+            <h3 class="text-leftLine">門市據點</h3>
+            <div class="shop__selectStore">
+                <label for="store">選擇分店</label>
+                <select id="store" name="store">
+                    <option>請選擇分店</option>
+                    <option value="taipeiFlagship">台北中山旗艦店</option>
+                </select>
+            </div>
+
+            <div class="shopDetail__content">
+                <div class="shop__block shopDetail__block">
+                    <img src="../assets/images/store-1.png" alt="shop1">
+                    <div class="block__text">
+                        <h5>台北信義旗艦店</h5>
+                        <ul class="block__list">
+                            <li><span class="material-icons-outlined">phone</span>電話：(02)000-1234</li>
+                            <li><span class="material-icons-outlined">schedule</span>營業時間：10:00-21:00</li>
+                            <li><span class="material-icons-outlined">place</span>地址：台北市信義區信義路五段7號</li>
+                        </ul>
+                    </div>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1807.5014195783033!2d121.56362852762733!3d25.03397771566302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da9c9e1f%3A0x1206bcf082fd10a6!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5L-h576p6Lev5LqU5q61N-iZnw!5e0!3m2!1szh-TW!2stw!4v1690645040077!5m2!1szh-TW!2stw" width="700" height="420" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </main>
+    <%- include('./layout/footer.ejs'); -%>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>
