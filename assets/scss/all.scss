@@ -1,0 +1,21 @@
+@import "./base/reset";
+
+//utils
+@import "./utils/variables";
+@import "./utils/utilities";
+
+@import "./base/base";
+
+//layout
+@import "./layout/header";
+@import "./layout/footer";
+@import "./layout/subHeader";
+
+//components
+@import "./components/form";
+@import "./components/pagination";
+
+//pages
+@import "./pages/index.scss";
+@import "./pages/faq.scss";
+@import "./pages/blog.scss";

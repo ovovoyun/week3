@@ -1,5 +1,3 @@
-@import "../main.scss";
-
 /*----- common -----*/
 .pro, .classic, .feat, .customerRec, .contactUs{
     @include py(80px);

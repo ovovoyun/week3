@@ -4,24 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- google  Material Icons -->
-    <link href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp" rel="stylesheet">
-
-    <link rel="stylesheet" href="./styles/css/faq.css">
     <title>week3</title>
+    <%- include('./layout/head.ejs'); -%>
 </head>
 <body>
-    <header class="header bg-primary">
-        <nav class="container">
-            <h1><a href="./index.html" class="logo"></a></h1>
-            <ul class="header__menu">
-                <li><a href="#">系列鏡框</a></li>
-                <li><a href="#">門市據點</a></li>
-                <li><a href="./blog.html">部落格</a></li>
-                <li><a href="./faq.html">常見問題</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('./layout/header.ejs'); -%>
 
     <main class="container">
         <div class="faq">
@@ -62,50 +49,6 @@
         </div>
     </main>
 
-    <footer class="bg-primary">
-        <div class="container footer">
-            <div class="footer__top">
-                <div class="footer__content">
-                    <ul class="footer__menu">
-                        <li><a href="#">首頁</a></li>
-                        <li><a href="#">系列鏡框</a></li>
-                        <li><a href="#">門市據點</a></li>
-                        <li><a href="./blog.html">部落格</a></li>
-                        <li><a href="./faq.html">常見問題</a></li>
-                    </ul>
-                    <ul class="footer__aboutUs">
-                        <li>
-                            <a href="tel:+886-800-000-000">
-                                <span class="material-icons-outlined">phone</span>
-                                <p>0800-000-000</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:glasses@business.com">
-                                <span class="material-icons-outlined">email</span>
-                                <p>glasses@business.com</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <ul class="footer__app">
-                    <li><a href="#"><img src="./images/ic-social-fb.png" alt="fb"></a></li>
-                    <li><a href="#"><img src="./images/ic_social_ig.png" alt="ig"></a></li>
-                    <li><a href="#"><img src="./images/ic_social_line.png" alt="line"></a></li>
-                </ul>
-            </div>
-
-            <hr/>
-
-            <div class="footer__bottom">
-                <p class="footer__copyright">Copyright © 2020 Glasses.All rights reserved.</p>
-
-                <ul class="footer__terms">
-                    <li><a href="#">隱私權政策</a></li>
-                    <li><a href="#">服務條款</a></li>
-                </ul>
-            </div>
-            
-        </div>
-    </footer>
+    <%- include('./layout/footer.ejs'); -%>
+    <script type="module" src="../js/main.js"></script>
 </body>
