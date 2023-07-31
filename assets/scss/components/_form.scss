@@ -5,8 +5,7 @@ form{
 
 .form__list{
     input, textarea{
-        padding: 6px 0px;
-        padding-left: 12px;
+        padding: 6px 12px;
         background-color: transparent;
         border: 1px solid black;
         font-size: 16px;
@@ -18,38 +17,79 @@ form{
             opacity: 0.2;
         }
     }
+
+    /*----- textarea -----*/
+    textarea {
+        resize: none;
+    
+        &::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            background-color: $primary;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+    }
     
     /*----- checkbox -----*/
-    input[type="checkbox"] {
-        display: none;
-    }
-    
-    input[type="checkbox"] + *::before {
-        content: "";
-        display: inline-block;
-        vertical-align: bottom;
-        @include size(18px, 18px);
-        margin-right: 7px;
-        border-radius: 3px;
-        border-style: solid;
-        border-width: 2px;
-        border-color: black;
-        flex-shrink: 0;
-    }
-    
-    input[type="checkbox"]:checked + *::before {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        content: '\2714';
-        color: white;
-        background: $primary;
-        border-color: transparent;
-    }
-    
-    input[type="checkbox"] + * {
-        display: inline-flex;
-        align-items: center;
+    .privacy {
+        display: block;
+        position: relative;
+        padding-left: 30px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        &:hover input ~ .checkmark {
+            background-color: $lightGray;
+        }
+
+        input {
+            display: none;
+
+            &:checked ~ .checkmark {
+                background-color: $primary;
+                border: none;
+            }
+
+            &:checked ~ .checkmark:after {
+                display: block;
+            }
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include size(20px, 20px);
+            background-color: transparent;
+            border: 2px solid rgb(52, 52, 52);
+            border-radius: 4px;
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: none;
+                top: 4px;
+                left: 7px;
+                @include size(6px, 10px);
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+            }
+        }
     }
     
     li{
@@ -59,6 +99,7 @@ form{
 
         &:last-child{
             margin-bottom: 48px;
+            
             @media (max-width: $breakPoint-sm) {
                 margin-bottom: 24px;
             }
