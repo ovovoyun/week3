@@ -29,14 +29,35 @@
         font-size: $fz-6;
     }
 
-    select{
-        outline: none;
+    .shop__selectBlock{
         flex-grow: 1;
-        font-size: 18px;
-        padding: 6px 12px;
-        border: 1px solid $borderGray;
-        color: $textGray;
+        position: relative;
+
+        select {
+            width: 100%;
+            appearance: none;
+            -moz-appearance: none; /* Firefox */
+            -webkit-appearance: none; /* Safari and Chrome */
+
+            position: relative;
+            outline: none;
+            padding: 6px 12px;
+            font-size: 18px;
+            border: 1px solid $borderGray;
+            color: $textGray;
+        }
+
+        &:after {
+            font-family: 'Material Icons';
+            content: '\e5c5';
+            position: absolute;
+            font-size: 24px;
+            right: 12px;
+            color: black;
+            pointer-events: none;
+        }
     }
+    
 }
 
 .shop__list{
