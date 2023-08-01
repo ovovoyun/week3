@@ -117,28 +117,11 @@
         flex-grow: 1;
 
         p{
-            position: relative;
             font-size: $fz-5;
             color: $gray;
-            display: -webkit-box;
-            -webkit-box-orient: vertical;
-            -webkit-line-clamp: 4;
-            overflow: hidden;
-            // text-overflow: ellipsis;
 
             @media (max-width: $breakPoint-md) {
                 font-size: $fz-4;
-
-                &::after {
-                    content: "...more";
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    background-color: white;
-                    padding: 0 6px;
-                    font-size: $fz-4;
-                    color: $gray;
-                }
             }
 
             @media (max-width: $breakPoint-sm) {
@@ -155,6 +138,14 @@
             
             @media (max-width: $breakPoint-md) {
                 display: none;
+            }
+        }
+
+        .md-moreBtn{
+            display: none;
+
+            @media (max-width: $breakPoint-md) {
+                display: inline-block;
             }
         }
     }
