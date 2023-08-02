@@ -3,11 +3,11 @@
     padding-top: 24px;
     padding-bottom: 80px;
 
-    @media (max-width: $breakPoint-md) {
+    @include md{
         padding-top: 8px;
     }
     
-    @media (max-width: $breakPoint-sm) {
+    @include sm{
         padding-top: 16px;
         padding-bottom: 64px;
     }
@@ -17,7 +17,7 @@
     width: 66%;
     margin-right: 24px;
 
-    @media (max-width: $breakPoint-sm) {
+    @include sm{
         width: 100%;
         margin-right: 0;
     }
@@ -57,7 +57,7 @@
                 font-weight: bold;
                 color: $primary;
 
-                @media (max-width: $breakPoint-sm) {
+                @include sm{
                     font-size: $fz-4;
                 }
             }
@@ -66,9 +66,9 @@
 
     h3{
         font-weight: normal;
-        color: black;
+        color: $dark;
 
-        @media (max-width: $breakPoint-sm) {
+        @include sm{
             font-size: $fz-6;
         }
     }
@@ -76,9 +76,9 @@
     h5{
         margin-bottom: 16px;
         font-weight: normal;
-        color: black;
+        color: $dark;
 
-        @media (max-width: $breakPoint-sm) {
+        @include sm{
             font-size: $fz-4;
         }
     }
@@ -90,13 +90,13 @@
 
     p{
         margin-bottom: 40px;
-        color: $gray;
+        color: $secondary;
 
-        @media (max-width: $breakPoint-md) {
+        @include md{
             margin-bottom: 24px;
         }
 
-        @media (max-width: $breakPoint-sm) {
+        @include sm{
             margin-bottom: 16px;
         }
     }
@@ -106,10 +106,10 @@
         align-items: center;
         padding-bottom: 16px;
         margin-bottom: 24px;
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid $secondary;
         gap: 0px 16px; 
 
-        @media (max-width: $breakPoint-sm) {
+        @include sm{
             display: none;
         }
 
@@ -129,7 +129,7 @@
         display: flex;
         justify-content: space-between;
 
-        @media (max-width: $breakPoint-sm) {
+        @include sm{
             display: none;
         }
 
@@ -144,7 +144,7 @@
     width: 30%;
     padding-top: 52px;
 
-    @media (max-width: $breakPoint-sm) {
+    @include sm{
         display: none;
     }
 
@@ -153,7 +153,7 @@
         align-items: center;
         margin-bottom: 4px;
 
-        @media (max-width: $breakPoint-md) {
+        @include md{
             margin-bottom: 8px;
         }
 
@@ -162,7 +162,7 @@
             font-size: 38px;
             color: $primary;
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 margin-right: 2px;
             }
         }
@@ -171,7 +171,7 @@
             font-weight: bold;
             color: $primary;
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 font-size: $fz-4;
             }
         }
@@ -182,7 +182,7 @@
         flex-wrap: wrap;
         gap: 4px 24px;
         
-        @media (max-width: $breakPoint-md) {
+        @include md{
             gap: 0px 16px;
         }
         
@@ -191,7 +191,7 @@
             font-size: $fz-6;
             color: $primary;
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 font-size: $fz-4;
             }
         }

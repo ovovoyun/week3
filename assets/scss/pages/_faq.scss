@@ -3,6 +3,15 @@
     padding-top: 96px;
     padding-bottom: 80px;
 
+    @mixin md{
+        padding-top: 80px;
+    }
+
+    @mixin sm{ 
+        padding-top: 40px;
+        padding-bottom: 64px;
+    }
+
     h5{
         margin-bottom: 24px;
     }
@@ -17,18 +26,5 @@
             font-size: $fz-5;
             font-weight: bold;
         }
-    }
-}
-
-@media (max-width: $breakPoint-md) {
-    .faq{
-        padding-top: 80px;
-    }
-}
-
-@media (max-width: $breakPoint-sm) {
-    .faq{
-        padding-top: 40px;
-        padding-bottom: 64px;
     }
 }

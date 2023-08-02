@@ -2,11 +2,11 @@
     padding-top: 96px;
     padding-bottom: 80px;
 
-    @media (max-width: $breakPoint-md) {
+    @mixin md{
         padding-top: 80px;
     }
 
-    @media (max-width: $breakPoint-sm) {
+    @mixin sm{
         padding-top: 40px;
         padding-bottom: 64px;
     }
@@ -19,7 +19,7 @@
     display: flex;
     margin-bottom: 40px;
 
-    @media (max-width: $breakPoint-sm) {
+    @mixin sm{
         width: 100%;
         margin-bottom: 24px;
     }
@@ -43,8 +43,8 @@
             outline: none;
             padding: 6px 12px;
             font-size: 18px;
-            border: 1px solid $borderGray;
-            color: $textGray;
+            border: 1px solid $secondary-border;
+            color: $secondary-text;
         }
 
         &:after {
@@ -53,7 +53,7 @@
             position: absolute;
             font-size: 24px;
             right: 12px;
-            color: black;
+            color: $dark;
             pointer-events: none;
         }
     }
@@ -65,7 +65,7 @@
     flex-wrap: wrap;
     gap: 48px 24px;
 
-    @media (max-width: $breakPoint-md) {
+    @mixin md{
         gap: 24px;
     }
 }
@@ -75,7 +75,7 @@
     flex-direction: column;
     width: calc((100% - 48px) / 3);
 
-    @media (max-width: $breakPoint-md) {
+    @mixin md{
         width: calc((100% - 24px) / 2);
     }
 
@@ -87,13 +87,13 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        border: 1px solid $borderBlack;
+        border: 1px solid $dark-border;
 
         h5{
             padding: 16px 24px;
-            color: black;
+            color: $dark;
             font-weight: normal;
-            border-bottom: 1px solid $borderBlack;
+            border-bottom: 1px solid $dark-border;
         }
     
         .block__list{
@@ -116,7 +116,7 @@
         a{
             @include py(16px);
             display: block;
-            background-color: black;
+            background-color: $dark;
             color: white;
             font-size: 19px;
             text-align: center;
@@ -131,7 +131,7 @@
     display: flex;
     gap: 0px 24px;
 
-    @media (max-width: $breakPoint-md) {
+    @mixin md{
         flex-direction: column;
         gap: 24px 0px;
     }
@@ -139,7 +139,7 @@
     .shopDetail__block{
         width: 40%;
     
-        @media (max-width: $breakPoint-md) {
+        @mixin md{
             width: 100%;
             flex-direction: row;
             gap: 0px 24px;
@@ -163,7 +163,7 @@
         width: 55%;
         height: auto;
 
-        @media (max-width: $breakPoint-md) {
+        @mixin md{
             width: 100%;
             min-height: 400px;
         }

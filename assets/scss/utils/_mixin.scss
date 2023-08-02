@@ -1,0 +1,44 @@
+//breakpoint
+@mixin md{
+    @media(max-width: $breakPoint-md){
+        @content;
+    }
+}
+
+@mixin sm{
+    @media(max-width: $breakPoint-sm){
+        @content;
+    }
+}
+
+//background-image
+@mixin bg-cover($url){
+    background-image: url($url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+//width, height
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}
+
+//padding
+@mixin px($px){
+    padding-left: $px;
+    padding-right: $px;
+}
+
+@mixin py($py){
+    padding-top: $py;
+    padding-bottom: $py;
+}
+
+//flex
+@mixin flex($justify: flex-start, $align: flex-start){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

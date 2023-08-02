@@ -1,7 +1,7 @@
 .product__tabList{
     display: flex;
 
-    @media (max-width: $breakPoint-md) {
+    @mixin md{
         padding: 0px;
     }
     
@@ -15,18 +15,18 @@
         @include py(24px);
         font-size: $fz-8;
         font-weight: 500;
-        border: 1px solid $borderGray;
+        border: 1px solid $secondary-border;
         border-top: none;
         border-bottom: 8px solid transparent;
         background-color: white;
-        color: black;
+        color: $dark;
         cursor: pointer;
     
         &:hover{
             opacity: 0.8;
-            border-bottom: 8px solid $borderGray;
+            border-bottom: 8px solid $secondary-border;
         }
-        @media (max-width: $breakPoint-md) {
+        @mixin md{
             @include py(16px);
             font-size: $fz-6;
         }
@@ -45,7 +45,7 @@
     display: flex;
     margin-bottom: 80px;
 
-    @media (max-width: $breakPoint-sm) {
+    @mixin sm{
         margin-bottom: 40px;
     }
 
@@ -53,7 +53,7 @@
         width: 50%;
         min-height: 296px;
 
-        @media (max-width: $breakPoint-sm) {
+        @mixin sm{
             min-height: 136px;
         }
     }
@@ -63,16 +63,16 @@
     padding-bottom: 80px;
     text-align: center;
 
-    @media (max-width: $breakPoint-sm) {
+    @mixin sm{
         padding-bottom: 64px;
     }
 
     h2{
         font-size: 42px;
-        color: black;
+        color: $dark;
         font-weight: 500;
 
-        @media (max-width: $breakPoint-sm) {
+        @mixin sm{
             font-size: $fz-6;
         }
         
@@ -81,10 +81,10 @@
     h3{
         margin-bottom: 32px;
         font-size: $fz-8;
-        color: black;
+        color: $dark;
         font-weight: normal;
 
-        @media (max-width: $breakPoint-sm) {
+        @mixin sm{
             margin-bottom: 24px;
             font-size: $fz-6;
         }
@@ -97,11 +97,11 @@
     gap: 80px 24px;
     margin-bottom: 80px;
 
-    @media (max-width: $breakPoint-md) {
+    @mixin md{
         gap: 40px 24px;
     }
     
-    @media (max-width: $breakPoint-sm) {
+    @mixin sm{
         gap: 24px 0px;
         margin-bottom: 64px;
     }
@@ -109,11 +109,11 @@
     li{
         width: calc((100% - 72px) / 4);
 
-        @media (max-width: $breakPoint-md) {
+        @mixin md{
             width: calc((100% - 24px) / 2);
         }
         
-        @media (max-width: $breakPoint-sm) {
+        @mixin sm{
             width: 100%;
         }
     }
@@ -125,7 +125,7 @@
         align-items: center;
 
         h5{
-            color: black;
+            color: $dark;
             font-weight: normal;
         }
 
@@ -154,13 +154,3 @@
         }
     }
 }
-
-/*
-@media (max-width: $breakPoint-md) {
-
-}
-
-@media (max-width: $breakPoint-sm) {
-
-}
-*/

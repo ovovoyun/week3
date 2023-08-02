@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: "Roboto", "Noto Sans TC", sans-serif;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+}
+
 a{
     text-decoration: none;
     color: black;
@@ -18,30 +24,9 @@ img{
     vertical-align: middle;
 }
 
-body{
-    font-family: "Roboto", "Noto Sans TC", sans-serif;
-    line-height: 1.5;
-    scroll-behavior: smooth;
-}
-
 button{
     cursor: pointer;
 }
-
-.container{
-    max-width: #{$container-lg + $gutter};
-    margin: 0 auto;
-    padding: 0 calc($gutter / 2);
-
-    @media (max-width: $breakPoint-md) {
-        max-width: #{$container-md + $gutter};
-    }
-    
-    @media (max-width: $breakPoint-sm) {
-        max-width: #{$container-sm + $gutter};
-    }
-}
-
 
 h2{
     font-size: $fz-16;

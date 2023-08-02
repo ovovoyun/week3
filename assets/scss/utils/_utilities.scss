@@ -1,54 +1,52 @@
-/*----- text -----*/
-.text-center{
-    text-align: center;
-}
+.container{
+    max-width: 1296px;
+    margin: 0 auto;
+    padding: 0 $gutter-half;
 
-.prevent-select{
-    user-select: none;
-}
+    @include md{
+        max-width: #{$container-md + $gutter};
+    }
 
-.text-leftLine{
-    padding-left: 16px;
-    border-left:  8px solid $borderPrimary;
-    margin-bottom: 32px;
-    color: black;
-
-    @media (max-width: $breakPoint-sm) {
-        font-size: $fz-6;
-        margin-bottom: 24px;
+    @include sm{
+        max-width: #{$container-sm + $gutter};
     }
 }
 
-/*----- background -----*/
-.bg-primary{
-    background-color: $primary;
-}
-
-.bg-lightPrimary{
-    background-color: $lightPrimary;
-}
-
-.bg-darkPrimary{
-    background-color: $darkPrimary;
-}
-
-/*----- display -----*/
-@media (max-width: $breakPoint-md) {
+//display: none
+@include md{
     .md-none{
         display: none;
     }
 }
 
-@media (max-width: $breakPoint-sm) {
+@include sm{
     .sm-none{
         display: none;
     }
 }
 
-/*----- row + col -----*/
+//margin-bottom
+@include md{
+    @for $i from 0 through $mbX {
+        .mb-md-#{$i} {
+            margin-bottom: $i * 4px;
+        }
+    }
+}
+
+@include sm{
+    @for $i from 0 through $mbX {
+        .mb-sm-#{$i} {
+            margin-bottom: $i * 4px;
+        }
+    }
+}
+
+//row + col
 .row{
     display: flex;
-    margin: 0 #{-(calc($gutter / 2))};
+    margin-left: #{- $gutter-half};
+    margin-right: #{- $gutter-half};
 }
 
 @for $i from 1 through 12 {
@@ -57,7 +55,7 @@
     }
 }
 
-@media (max-width: $breakPoint-md) {
+@include md{
     .col-md-6{
         width: 50%;
     }
@@ -67,24 +65,13 @@
     }
 }
 
-@media (max-width: $breakPoint-sm) {
+@include sm{
     .col-sm-12{
         width: 100%;
     }
 }
 
-/*----- flex -----*/
-@mixin flex($justify: flex-start, $align: flex-start){
-    display: flex;
-    justify-content: $justify;
-    align-items: $align;
-}
-
-@mixin size($w, $h){
-    width: $w;
-    height: $h;
-}
-
+//flex
 .flex{
     display: flex;
 }
@@ -109,31 +96,64 @@
     align-items: center;
 }
 
-/*----- padding + margin -----*/
-@mixin px($px){
-    padding-left: $px;
-    padding-right: $px;
-}
-
-@mixin py($py){
-    padding-top: $py;
-    padding-bottom: $py;
-}
-
+//margin + padding
 .mx-auto{
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 } 
 
-%mx--gutter{
-    margin: 0 #{-(calc($gutter / 2))};
+.ml-auto{
+    margin-left: auto;
 }
 
-%px-gutter{
-    padding: 0 #{calc($gutter / 2)};
+.mr-auto{
+    margin-right: auto;
+}
+
+%mx--gutterHalf{
+    margin: 0 #{- $gutter-half};
+}
+
+%px-gutterHalf{
+    padding: 0 $gutter-half;
 }
 
 
-/*----- others -----*/
+//background-color
+.bg-primary{
+    background-color: $primary;
+}
+
+.bg-primaryLight{
+    background-color: $primary-light;
+}
+
+.bg-primaryDark{
+    background-color: $primary-dark;
+}
+
+//text
+.text-center{
+    text-align: center;
+}
+
+.prevent-select{
+    user-select: none;
+}
+
+.text-leftLine{
+    padding-left: 16px;
+    border-left:  8px solid $primary-border;
+    margin-bottom: 32px;
+    color: black;
+
+    @include sm{
+        font-size: $fz-6;
+        margin-bottom: 24px;
+    } 
+}
+
+//others
 %line{
     border: 1px solid blue;
 }

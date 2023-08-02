@@ -1,7 +1,10 @@
+
+@import "./utils/variables";
+
 @import "./base/reset";
 
 //utils
-@import "./utils/variables";
+@import "./utils/mixin";
 @import "./utils/utilities";
 
 @import "./base/base";

@@ -2,13 +2,13 @@
     margin-top: 96px;
     margin-bottom: 80px;
 
-    @media (max-width: $breakPoint-md) {
+    @include md{
         margin-top: 80px;
     }
 
-    @media (max-width: $breakPoint-sm) {
-            margin-top: 40px;
-            margin-bottom: 64px;
+    @include sm{
+        margin-top: 40px;
+        margin-bottom: 64px;
     }
 }
 
@@ -17,11 +17,11 @@
     flex-direction: column;
     margin-bottom: 124px;
 
-    @media (max-width: $breakPoint-md) {
+    @include md{
         margin-bottom: 80px;
     }
 
-    @media (max-width: $breakPoint-sm) {
+    @include sm{
         margin-bottom: 64px;
     }
 
@@ -32,14 +32,14 @@
             margin-bottom: 60px;
         }
 
-        @media (max-width: $breakPoint-md) {
+        @include md{
 
             &:not(:last-child){
                 margin-bottom: 24px;
             }
         }
 
-        @media (max-width: $breakPoint-sm) {
+        @include sm{
             flex-direction: column;
         }
 
@@ -48,7 +48,7 @@
             max-width: 636px;
             margin-right: 24px;
 
-            @media (max-width: $breakPoint-sm) {
+            @include sm{
                 width: 100%;
                 margin-bottom: 8px;
                 margin-right: 0;
@@ -66,11 +66,11 @@
     .blog__titleBlock{
 
         h5{
-            color: $darkPrimary;
+            color: $primary-dark;
             font-size: $fz-8;
             font-weight: normal;
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 font-size: $fz-6;
             }
         }
@@ -82,7 +82,7 @@
             align-items: center;
             margin-bottom: 16px;
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 margin-bottom: 4px;
             }
 
@@ -95,7 +95,7 @@
                 font-weight: 500;
             }
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
 
                 .text-medium{
                     font-weight: 500;
@@ -118,13 +118,13 @@
 
         p{
             font-size: $fz-5;
-            color: $gray;
+            color: $secondary;
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 font-size: $fz-4;
             }
 
-            @media (max-width: $breakPoint-sm) {
+            @include sm{
                 display: none;
             }
         }
@@ -134,9 +134,9 @@
             display: inline-block;
             font-size: $fz-9;
             font-weight: bold;
-            color: $darkPrimary;
+            color: $primary-dark;
             
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 display: none;
             }
         }
@@ -144,7 +144,7 @@
         .md-moreBtn{
             display: none;
 
-            @media (max-width: $breakPoint-md) {
+            @include md{
                 display: inline-block;
             }
         }

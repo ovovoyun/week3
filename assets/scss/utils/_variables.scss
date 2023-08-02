@@ -1,4 +1,6 @@
 $gutter: 24px;
+$gutter-half: calc($gutter / 2);
+
 $container-lg: 1296px;
 $container-md: 696px;
 $container-sm: 348px;
@@ -9,16 +11,17 @@ $breakPoint-sm: 375px;
 $imgPath: "../images/";
 
 $primary: #AA0601;
-$lightPrimary: #FBF2F2;
-$darkPrimary: #650300;
-$borderPrimary: #9F1213;
-$secondary: black;
-$borderBlack: #00000020;
+$primary-light: #FBF2F2;
+$primary-dark: #650300;
+$primary-border: #9F1213;
 
-$gray: #555555;
-$lightGray: #F2F2F2;
-$borderGray: #CED4DA;
-$textGray: #495057;
+$secondary: #555555;
+$secondary-light: #F2F2F2;
+$secondary-border: #CED4DA;
+$secondary-text: #495057;
+
+$dark: black;
+$dark-border: #00000020;
 
 $radius: 4px;
 
@@ -30,4 +33,4 @@ $fz-6: 24px;
 $fz-5: 20px;
 $fz-4: 16px;
 
-$mbX: 12;
+$mbX: 18;

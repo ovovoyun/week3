@@ -7,13 +7,13 @@ form{
     input, textarea{
         padding: 6px 12px;
         background-color: transparent;
-        border: 1px solid black;
+        border: 1px solid $dark;
         font-size: 16px;
         line-height: 1.5;
         outline: none;
     
         &::placeholder{
-            color: black;
+            color: $dark;
             opacity: 0.2;
         }
     }
@@ -51,7 +51,7 @@ form{
         user-select: none;
 
         &:hover input ~ .checkmark {
-            background-color: $lightGray;
+            background-color: $secondary-light;
         }
 
         input {
@@ -100,7 +100,7 @@ form{
         &:last-child{
             margin-bottom: 48px;
             
-            @media (max-width: $breakPoint-sm) {
+            @mixin sm{
                 margin-bottom: 24px;
             }
         }
@@ -125,7 +125,7 @@ form{
     background-color: $primary;
     cursor: pointer;
 
-    @media (max-width: $breakPoint-md) {
+    @mixin md{
         width: 100%;
         padding: 16px 0px;
     }
