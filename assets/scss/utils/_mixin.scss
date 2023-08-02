@@ -33,6 +33,13 @@
     height: $h;
 }
 
+@mixin w-gap($gap, $col){
+    width: calc((100% - $gap) / $col);
+}
+
+@mixin w-col($colX){
+    width: percentage(calc(round(calc($colX / 12 * 100000)) / 100000));
+}
 //padding
 @mixin px($px){
     padding-left: $px;

@@ -83,7 +83,7 @@ form{
                 top: 4px;
                 left: 7px;
                 @include size(6px, 10px);
-                border: solid white;
+                border: solid $light;
                 border-width: 0 3px 3px 0;
                 transform: rotate(45deg);
                 -webkit-transform: rotate(45deg);
@@ -121,7 +121,7 @@ form{
     align-self: center;
     border: none;
     font-size: $fz-4;
-    color: white;
+    color: $light;
     background-color: $primary;
     cursor: pointer;
 

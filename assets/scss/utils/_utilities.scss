@@ -146,6 +146,7 @@
     border-left:  8px solid $primary-border;
     margin-bottom: 32px;
     color: black;
+    font-weight: bold;
 
     @include sm{
         font-size: $fz-6;

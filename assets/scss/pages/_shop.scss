@@ -12,11 +12,11 @@
     }
 }
 
-.shop__selectCity, .shop__selectStore{
+/*----- select -----*/
+.shop__selectRow{
     display: flex;
-    min-width: 304px;
     width: 32%;
-    display: flex;
+    min-width: 304px;
     margin-bottom: 40px;
 
     @include sm{
@@ -29,7 +29,7 @@
         font-size: $fz-6;
     }
 
-    .shop__selectBlock{
+    .selectBlock{
         flex-grow: 1;
         position: relative;
 
@@ -70,34 +70,27 @@
     }
 }
 
-.shop__block{
-    display: flex;
-    flex-direction: column;
-    width: calc((100% - 48px) / 3);
+
+.block{
+    @include w-gap(48px, 3);
 
     @include md{
-        width: calc((100% - 24px) / 2);
+        @include w-gap(24px, 2);
     }
 
     @media (max-width: 630px) {
         width: 100%;
     }
 
-    .block__text{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+    &__content{
         border: 1px solid $dark-border;
 
         h5{
             padding: 16px 24px;
-            color: $dark;
-            font-weight: normal;
             border-bottom: 1px solid $dark-border;
         }
     
         .block__list{
-            flex-grow: 1;
             padding: 16px 24px;
         
             li{
@@ -105,11 +98,11 @@
                 align-items: center;
                 margin-bottom: 8px;
                 font-size: $fz-5;
-        
-                span{
-                    margin-right: 11px;
-                    font-size: 18px;
-                }
+            }
+
+            span{
+                margin-right: 11px;
+                font-size: 18px;
             }
         }
 
@@ -117,16 +110,15 @@
             @include py(16px);
             display: block;
             background-color: $dark;
-            color: white;
+            color: $light;
             font-size: 19px;
             text-align: center;
         }
     }
-
 }
 
-/*----- shopDetail -----*/
 
+/*----- shopDetail.html -----*/
 .shopDetail__content{
     display: flex;
     gap: 0px 24px;
@@ -137,15 +129,16 @@
     }
 
     .shopDetail__block{
-        width: 40%;
+        @include w-col(5);
     
         @include md{
             width: 100%;
+            display: flex;
             flex-direction: row;
             gap: 0px 24px;
 
             img{
-                width: calc((100% - 24px) / 2);
+                @include w-gap(24px, 2);
             }
         }
     
@@ -159,8 +152,18 @@
         }
     }
 
+    .block__content{
+        @include md{
+            @include w-gap(24px, 2);
+        }
+
+        @media (max-width: 600px) {
+            width: 100%;
+        }
+    }
+
     iframe{
-        width: 55%;
+        @include w-col(7);
         height: auto;
 
         @include md{

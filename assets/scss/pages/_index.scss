@@ -7,9 +7,16 @@
     }
 }
 
-h2, h3, h4, h5{
-    color: $primary-dark;
+.home{
+    h2, h3, h4, h5{
+        color: $primary-dark;
+    }
+
+    h2, h3, h5{
+        font-weight: bold;
+    }
 }
+
 
 .classic, .feat, .customerRec, .contactUs{
     h3{
@@ -43,7 +50,7 @@ h2, h3, h4, h5{
 /*----- banner -----*/
 .banner{
     @include py(296px);
-    background: center/cover no-repeat url("#{$imgPath}home-header.png");
+    @include bg-cover("#{$imgPath}home-header.png");
     text-align: right;
 
     h2{
@@ -56,14 +63,14 @@ h2, h3, h4, h5{
 
     &__btn{
         background-color: $primary;
-        color: white;
+        color: $light;
         font-size: $fz-5;
         padding: 6px 12px;
     }
 
     @include md{
-        background: left/cover no-repeat url("#{$imgPath}home-header-sm.png");
-        
+        @include bg-cover("#{$imgPath}home-header-sm.png");
+        background-position: left;
     }
 
     @include sm{
@@ -161,10 +168,10 @@ h2, h3, h4, h5{
 
 /*----- feat -----*/
 .feat{
-    background: center/cover no-repeat url("#{$imgPath}index-bg.png");
+    @include bg-cover("#{$imgPath}index-bg.png");
 
     h3{
-        color: white;
+        color: $light;
     }
 
     &__list{
@@ -193,7 +200,7 @@ h2, h3, h4, h5{
 
         p{
             @include py(8px);
-            background-color: white;
+            background-color: $light;
         }
     }
 }

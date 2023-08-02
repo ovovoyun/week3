@@ -18,7 +18,7 @@
         border: 1px solid $secondary-border;
         border-top: none;
         border-bottom: 8px solid transparent;
-        background-color: white;
+        background-color: $light;
         color: $dark;
         cursor: pointer;
     
@@ -69,7 +69,6 @@
 
     h2{
         font-size: 42px;
-        color: $dark;
         font-weight: 500;
 
         @include sm{
@@ -81,8 +80,6 @@
     h3{
         margin-bottom: 32px;
         font-size: $fz-8;
-        color: $dark;
-        font-weight: normal;
 
         @include sm{
             margin-bottom: 24px;
@@ -123,11 +120,6 @@
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-
-        h5{
-            color: $dark;
-            font-weight: normal;
-        }
 
         p{
             font-size: $fz-6;

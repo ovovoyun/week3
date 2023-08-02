@@ -16,8 +16,10 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 124px;
+    gap: 60px 0px;
 
     @include md{
+        gap: 24px 0px;
         margin-bottom: 80px;
     }
 
@@ -27,127 +29,109 @@
 
     li{
         display: flex;
-
-        &:not(:last-child){
-            margin-bottom: 60px;
-        }
-
-        @include md{
-
-            &:not(:last-child){
-                margin-bottom: 24px;
-            }
-        }
+        gap: 0px 24px;
 
         @include sm{
             flex-direction: column;
         }
+    }
 
-        img{
-            width: 50%;
-            max-width: 636px;
-            margin-right: 24px;
+    img{
+        @include w-gap(24px, 2);
+        max-width: 636px;
 
-            @include sm{
-                width: 100%;
-                margin-bottom: 8px;
-                margin-right: 0;
+        @include sm{
+            width: 100%;
+            margin-bottom: 8px;
+            margin-right: 0;
+        }
+    }
+}
+
+.blog__contentBlock{
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__titleBlock{
+    h5{
+        color: $primary-dark;
+        font-size: $fz-8;
+
+        @include md{
+            font-size: $fz-6;
+        }
+    }
+
+    .subTitle{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+
+        @include md{
+            margin-bottom: 4px;
+        }
+
+        .text-medium{
+            font-weight: 500;
+            font-size: $fz-5;
+
+            @include md{
+                font-weight: 500;
+                font-size: $fz-4;
             }
         }
 
-        
+        .date{
+            font-weight: 500;
+
+            @include md{
+                font-weight: 500;
+            }
+        }
     }
 }
 
 .blog__textBlock{
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
 
-    .blog__titleBlock{
+    p{
+        font-size: $fz-5;
+        color: $secondary;
 
-        h5{
-            color: $primary-dark;
-            font-size: $fz-8;
-            font-weight: normal;
-
-            @include md{
-                font-size: $fz-6;
-            }
+        @include md{
+            font-size: $fz-4;
         }
 
-        .blog__subTitle{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 16px;
-
-            @include md{
-                margin-bottom: 4px;
-            }
-
-            .text-medium{
-                font-weight: 500;
-                font-size: $fz-5;
-            }
-
-            .date{
-                font-weight: 500;
-            }
-
-            @include md{
-
-                .text-medium{
-                    font-weight: 500;
-                    font-size: $fz-4;
-                }
-            
-                .date{
-                    font-weight: 500;
-                }
-            }
-            
+        @include sm{
+            display: none;
         }
     }
 
-    .blog__contentBlock{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        flex-grow: 1;
-
-        p{
-            font-size: $fz-5;
-            color: $secondary;
-
-            @include md{
-                font-size: $fz-4;
-            }
-
-            @include sm{
-                display: none;
-            }
-        }
-
-        .lg-moreBtn{
-            align-self: flex-end;
-            display: inline-block;
-            font-size: $fz-9;
-            font-weight: bold;
-            color: $primary-dark;
-            
-            @include md{
-                display: none;
-            }
-        }
-
-        .md-moreBtn{
+    .moreBtn-lg{
+        align-self: flex-end;
+        display: inline-block;
+        font-size: $fz-9;
+        font-weight: bold;
+        color: $primary-dark;
+        
+        @include md{
             display: none;
+        }
+    }
 
-            @include md{
-                display: inline-block;
-            }
+    .moreBtn-md{
+        display: none;
+
+        @include md{
+            display: inline-block;
         }
     }
 }
+
 

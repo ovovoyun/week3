@@ -14,28 +14,28 @@
 }
 
 .blogDetail__content{
-    width: 66%;
+    @include w-col(8);
     margin-right: 24px;
 
     @include sm{
         width: 100%;
         margin-right: 0;
     }
-    
+
     .content__breadList{
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 8px;
-
+    
         li{
             a{
                 padding: 0px 4px ;
             }
-
+    
             &:not(:last-child):after {
                 content: "/";
             }
-
+    
             &:last-child{
                 a{
                     color: $primary;
@@ -48,54 +48,50 @@
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 8px;
-
+    
         li{
             margin-right: 15px;
-
-            a{
-                font-size: $fz-6;
-                font-weight: bold;
-                color: $primary;
-
-                @include sm{
-                    font-size: $fz-4;
-                }
+        }
+    
+        a{
+            font-size: $fz-6;
+            font-weight: bold;
+            color: $primary;
+    
+            @include sm{
+                font-size: $fz-4;
             }
         }
     }
 
     h3{
-        font-weight: normal;
-        color: $dark;
-
         @include sm{
             font-size: $fz-6;
         }
     }
-
+    
     h5{
         margin-bottom: 16px;
-        font-weight: normal;
-        color: $dark;
-
+        font-weight: 500;
+    
         @include sm{
             font-size: $fz-4;
         }
     }
-
+    
     img{
         max-height: 520px;
         margin-bottom: 8px;
     }
-
+    
     p{
         margin-bottom: 40px;
         color: $secondary;
-
+    
         @include md{
             margin-bottom: 24px;
         }
-
+    
         @include sm{
             margin-bottom: 16px;
         }
@@ -104,35 +100,36 @@
     .content__appList{
         display: flex;
         align-items: center;
+        gap: 0px 16px; 
         padding-bottom: 16px;
         margin-bottom: 24px;
         border-bottom: 1px solid $secondary;
-        gap: 0px 16px; 
-
+    
         @include sm{
             display: none;
         }
-
+    
         li{
             @include size(24px, 24px);
         }
+    
         span{
             font-weight: bold;
         }
-
+    
         a{
             display: block;
         }
     }
-    
+
     .content__pageBlock{
         display: flex;
         justify-content: space-between;
-
+    
         @include sm{
             display: none;
         }
-
+    
         a{
             display: flex;
             align-items: center;
