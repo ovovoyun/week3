@@ -32,13 +32,13 @@
             }
         }
 
-        @mixin md{
+        @include md{
             .page-preBtn, .page-nextBtn{
                 padding: 12px 8px;
             }
         }
 
-        @mixin sm{
+        @include sm{
             &:nth-child(5), &:nth-child(6){
                 display: none;
             }

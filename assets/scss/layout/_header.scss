@@ -12,7 +12,7 @@
         text-indent: 101%;
         overflow: hidden;
         white-space: nowrap;
-        background: center/contain no-repeat url("#{$imgPath}logo-white.png");
+        @include bg-contain("#{$imgPath}logo-white.png");
     }
 
     &__menu{
@@ -37,7 +37,7 @@
     }
 }
 
-@media (max-width: $breakPoint-md) {
+@include md{
     .header{
         padding-bottom: 0;
 

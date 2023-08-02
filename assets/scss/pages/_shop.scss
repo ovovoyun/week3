@@ -2,11 +2,11 @@
     padding-top: 96px;
     padding-bottom: 80px;
 
-    @mixin md{
+    @include md{
         padding-top: 80px;
     }
 
-    @mixin sm{
+    @include sm{
         padding-top: 40px;
         padding-bottom: 64px;
     }
@@ -19,7 +19,7 @@
     display: flex;
     margin-bottom: 40px;
 
-    @mixin sm{
+    @include sm{
         width: 100%;
         margin-bottom: 24px;
     }
@@ -65,7 +65,7 @@
     flex-wrap: wrap;
     gap: 48px 24px;
 
-    @mixin md{
+    @include md{
         gap: 24px;
     }
 }
@@ -75,7 +75,7 @@
     flex-direction: column;
     width: calc((100% - 48px) / 3);
 
-    @mixin md{
+    @include md{
         width: calc((100% - 24px) / 2);
     }
 
@@ -131,7 +131,7 @@
     display: flex;
     gap: 0px 24px;
 
-    @mixin md{
+    @include md{
         flex-direction: column;
         gap: 24px 0px;
     }
@@ -139,7 +139,7 @@
     .shopDetail__block{
         width: 40%;
     
-        @mixin md{
+        @include md{
             width: 100%;
             flex-direction: row;
             gap: 0px 24px;
@@ -163,7 +163,7 @@
         width: 55%;
         height: auto;
 
-        @mixin md{
+        @include md{
             width: 100%;
             min-height: 400px;
         }

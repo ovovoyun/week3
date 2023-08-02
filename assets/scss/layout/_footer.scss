@@ -1,6 +1,10 @@
 .footer{
     padding-top: 60px;
 
+    @include md{
+        padding-top: 24px;
+    }
+
     a{
         display: block;
         color: white;
@@ -12,6 +16,10 @@
         justify-content: space-between;
         align-items: flex-start;
         margin-bottom: 32px;
+
+        @include md{
+            margin-bottom: 24px;
+        }
     }
 
     .footer__content{
@@ -23,6 +31,10 @@
         display: flex;
         justify-content: space-between;
         margin-bottom: 24px;
+
+        @include md{
+            display: none;
+        }
 
         a{
             text-align: center;
@@ -43,26 +55,43 @@
                 align-items: center;
                 font-size: $fz-9;
 
+                @include md{
+                    font-size: $fz-4;
+                }
+
                 span{
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     font-size: 36px;
                     margin-right: 16px;
+
+                    @include md{
+                        margin-right: 10px;
+                    }
                 }
             }
 
             &:first-child{
                 margin-bottom: 8px;
             }
-        }
+        }  
     }
+
 
     .footer__app{
         @include flex(space-between, center);
 
         a{
             padding: 0 16px;
+                
+            @include md{
+                padding: 0px 8px;
+            }
+
+            @include sm{
+                padding: 0px;
+            }
         }
 
         li:last-child{
@@ -82,17 +111,35 @@
         display: flex;
         justify-content: space-between;
         @include py(32px);
+
+        @include md{
+            flex-direction: column;
+            @include py(16px);
+        }
     }
 
     .footer__copyright{
         color: white;
+
+        @include md{
+            margin-bottom: 8px;
+        }
     }
 
     .footer__terms{
         display: flex;
 
+        @include md{
+            flex-direction: column;
+        }
+
         a{
             padding: 0px 24px;
+
+            @include md{
+                padding: 0;
+                padding-bottom: 8px;
+            }
         }
 
         li:last-child{
@@ -103,61 +150,5 @@
     }
 }
 
-@media (max-width: $breakPoint-md) {
-    .footer{
-        padding-top: 24px;
-
-        &__top{
-            margin-bottom: 24px;
-        }
-
-        .footer__menu{
-            display: none;
-        }
-
-        .footer__aboutUs{
-            li > a{
-                font-size: $fz-4;
-
-                span{
-                    margin-right: 10px;
-                }
-            }
-        }
-
-        .footer__app{
-            a{
-                padding: 0px 8px;
-            }
-        }
-
-        &__bottom{
-            flex-direction: column;
-            @include py(16px);
-        }
-
-        .footer__copyright{
-            margin-bottom: 8px;
-        }
-
-        .footer__terms{
-            flex-direction: column;
-            
-            a{
-                padding: 0;
-                padding-bottom: 8px;
-            }
-        }
-    }
-}
 
 
-@media (max-width: $breakPoint-sm) {
-    .footer{
-        .footer__app{
-            a{
-                padding: 0px;
-            }
-        }
-    }
-}

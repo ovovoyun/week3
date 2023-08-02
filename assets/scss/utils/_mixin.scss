@@ -14,10 +14,18 @@
 //background-image
 @mixin bg-cover($url){
     background-image: url($url);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 }
+
+@mixin bg-contain($url){
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 
 //width, height
 @mixin size($w, $h){

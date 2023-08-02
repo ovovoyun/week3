@@ -1,7 +1,7 @@
 .product__tabList{
     display: flex;
 
-    @mixin md{
+    @include md{
         padding: 0px;
     }
     
@@ -26,7 +26,7 @@
             opacity: 0.8;
             border-bottom: 8px solid $secondary-border;
         }
-        @mixin md{
+        @include md{
             @include py(16px);
             font-size: $fz-6;
         }
@@ -45,7 +45,7 @@
     display: flex;
     margin-bottom: 80px;
 
-    @mixin sm{
+    @include sm{
         margin-bottom: 40px;
     }
 
@@ -53,7 +53,7 @@
         width: 50%;
         min-height: 296px;
 
-        @mixin sm{
+        @include sm{
             min-height: 136px;
         }
     }
@@ -63,7 +63,7 @@
     padding-bottom: 80px;
     text-align: center;
 
-    @mixin sm{
+    @include sm{
         padding-bottom: 64px;
     }
 
@@ -72,7 +72,7 @@
         color: $dark;
         font-weight: 500;
 
-        @mixin sm{
+        @include sm{
             font-size: $fz-6;
         }
         
@@ -84,7 +84,7 @@
         color: $dark;
         font-weight: normal;
 
-        @mixin sm{
+        @include sm{
             margin-bottom: 24px;
             font-size: $fz-6;
         }
@@ -97,11 +97,11 @@
     gap: 80px 24px;
     margin-bottom: 80px;
 
-    @mixin md{
+    @include md{
         gap: 40px 24px;
     }
     
-    @mixin sm{
+    @include sm{
         gap: 24px 0px;
         margin-bottom: 64px;
     }
@@ -109,11 +109,11 @@
     li{
         width: calc((100% - 72px) / 4);
 
-        @mixin md{
+        @include md{
             width: calc((100% - 24px) / 2);
         }
         
-        @mixin sm{
+        @include sm{
             width: 100%;
         }
     }

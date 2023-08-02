@@ -100,7 +100,7 @@ form{
         &:last-child{
             margin-bottom: 48px;
             
-            @mixin sm{
+            @include sm{
                 margin-bottom: 24px;
             }
         }
@@ -125,7 +125,7 @@ form{
     background-color: $primary;
     cursor: pointer;
 
-    @mixin md{
+    @include md{
         width: 100%;
         padding: 16px 0px;
     }

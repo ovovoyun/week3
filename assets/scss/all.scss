@@ -1,13 +1,11 @@
-
 @import "./utils/variables";
 
 @import "./base/reset";
+@import "./base/base";
 
 //utils
 @import "./utils/mixin";
 @import "./utils/utilities";
-
-@import "./base/base";
 
 //layout
 @import "./layout/header";
