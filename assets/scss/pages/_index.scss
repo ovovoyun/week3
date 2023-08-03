@@ -96,8 +96,8 @@
             @extend %px-gutterHalf;
 
             img{
-                @include size(83px, 83px);
-                margin-bottom: 24px;
+                @include size(100px, 100px);
+                margin-bottom: 16px;
             }
 
             h5{

@@ -36,9 +36,12 @@
         }
     }
 
-    img{
-        @include w-gap(24px, 2);
-        max-width: 636px;
+    .detailLink{
+        @include w-col(6);
+
+        img{
+            height: 100%;
+        }
 
         @include sm{
             width: 100%;
@@ -46,11 +49,17 @@
             margin-right: 0;
         }
     }
+    
 }
 
 .blog__contentBlock{
     display: flex;
     flex-direction: column;
+    @include w-col(6);
+
+    @include sm{
+        width: 100%;
+    }
 }
 
 .blog__titleBlock{
@@ -72,6 +81,10 @@
 
         @include md{
             margin-bottom: 4px;
+        }
+
+        @include sm{
+            margin-bottom: 0px;
         }
 
         .text-medium{

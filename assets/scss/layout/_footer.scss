@@ -69,6 +69,10 @@
                     @include md{
                         margin-right: 10px;
                     }
+
+                    @include sm{
+                        font-size: 24px;
+                    }
                 }
             }
 
@@ -90,7 +94,7 @@
             }
 
             @include sm{
-                padding: 0px;
+                padding: 0 4px;
             }
         }
 
@@ -101,8 +105,15 @@
         }
 
         img{
-            @include size(40px, 40px);
+            @include size(48px, 48px);
             object-fit: contain;
+
+            @include md{
+                @include size(40px, 40px);
+            }
+            @include sm{
+                @include size(24px, 24px);
+            }
         }
     }
 
