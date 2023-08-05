@@ -7,7 +7,7 @@
         padding-top: 8px;
     }
     
-    @include sm{
+    @media(max-width: 480px){
         padding-top: 16px;
         padding-bottom: 64px;
     }
@@ -17,7 +17,7 @@
     @include w-col(8);
     margin-right: 24px;
 
-    @include sm{
+    @media(max-width: 480px){
         width: 100%;
         margin-right: 0;
     }
@@ -58,14 +58,14 @@
             font-weight: bold;
             color: $primary;
     
-            @include sm{
+            @media(max-width: 480px){
                 font-size: $fz-4;
             }
         }
     }
 
     h3{
-        @include sm{
+        @media(max-width: 480px){
             font-size: $fz-6;
         }
     }
@@ -74,7 +74,7 @@
         margin-bottom: 16px;
         font-weight: 500;
     
-        @include sm{
+        @media(max-width: 480px){
             font-size: $fz-4;
         }
     }
@@ -92,7 +92,7 @@
             margin-bottom: 24px;
         }
     
-        @include sm{
+        @media(max-width: 480px){
             margin-bottom: 16px;
         }
     }
@@ -105,7 +105,7 @@
         margin-bottom: 24px;
         border-bottom: 1px solid $secondary;
     
-        @include sm{
+        @media(max-width: 480px){
             display: none;
         }
     
@@ -124,9 +124,15 @@
 
     .content__pageBlock{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
+
+        @include md {
+            gap: 10px;
+            justify-content: center;
+        }
     
-        @include sm{
+        @media(max-width: 480px){
             display: none;
         }
     
@@ -141,7 +147,7 @@
     width: 30%;
     padding-top: 52px;
 
-    @include sm{
+    @media(max-width: 480px){
         display: none;
     }
 
